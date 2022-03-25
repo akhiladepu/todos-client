@@ -13,13 +13,13 @@ export const Todos = () => {
     }, [])
 
     const getTodos = () => {
-        axios.get("https://shielded-headland-23335.herokuapp.com/todos").then((res) => {
+        axios.get("https://todos-api-akhil.herokuapp.com/todos").then((res) => {
             dispatch(addTodo([...res.data]));
         })
     }
 
     const addTodos = () => {
-        axios.post("https://shielded-headland-23335.herokuapp.com/todos", {
+        axios.post("https://todos-api-akhil.herokuapp.com/todos", {
             title: text
         }).then(() => { getTodos() });
     }
