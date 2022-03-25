@@ -28,7 +28,7 @@ export const Todos = () => {
 
     return (<div>
         <input type="text" onChange={(e) => { setText(e.target.value) }} />
-        <button onClick={() => { addTodos() }}>Add Todo</button>
+        <button onClick={() => { addTodos() }}>Add Todos</button>
         <div>
             {todos.map(el => <div>{el.title}</div>)}
         </div>
